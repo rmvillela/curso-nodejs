@@ -2,5 +2,6 @@ var express = require('express'); // O require do express retorna uma função q
 var app = express();
 
 app.set('view engine', 'ejs'); // Altera uma propriedade do express
+app.set('views', 'app/views'); // Aponta o caminho das views (é relativo ao local onde o módulo está sendo importado)
 
 module.exports = app;
