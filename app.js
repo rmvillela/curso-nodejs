@@ -1,7 +1,4 @@
-var express = require('express'); // O require do express retorna uma função que não é executada por padrão. Para acionar basta adicionar um () no final da chamada, ficando require('express')();
-var app = express();
-
-app.set('view engine', 'ejs'); // Altera uma propriedade do express
+var app = require('./config/server'); // Importa o módulo server
 
 app.get('/', function(req, res) {
   res.render('home/index');
