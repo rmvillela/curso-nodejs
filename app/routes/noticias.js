@@ -11,7 +11,7 @@ module.exports = function(app) {
 		});
 
 		connection.query('select * from noticias', function(error, result) {
-			error ? res.send(error) : res.send(result);
+			error ? res.send(error) : res.render('noticias/noticias', {noticias: result});
 		});
 	});
 };
